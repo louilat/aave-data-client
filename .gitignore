@@ -2,3 +2,4 @@
 *.ipynb
 raw_to_api.py
 env/
+deployment/
