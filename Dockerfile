@@ -9,5 +9,5 @@ COPY requirements.txt .
 RUN pip install -r requirements.txt
 
 COPY app.py .
-COPY src ./src
+COPY pages ./pages
 CMD ["streamlit", "run", "app.py"]
