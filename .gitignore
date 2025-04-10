@@ -1,3 +1,4 @@
 *.pyc
 *.ipynb
 raw_to_api.py
+env/
