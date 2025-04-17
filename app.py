@@ -1,8 +1,8 @@
 import streamlit as st
 
 from pages.user.user_page import UserPage
-from pages.events.page import EventsPage
-from pages.liquidations.page import LiquidationsPage, LiqProbaPage
+from pages.prices.prices_page import PricesPage
+from pages.liquidations.page import LiquidationsPage
 
 st.title("Aave-V3 Data")
 
@@ -10,18 +10,15 @@ st.sidebar.title("Navigation")
 section = st.sidebar.radio(
     "Pages",
     options=[
-        "Liquidation Probabilities",
         "Users Balances",
         "Liquidations Trajectories",
-        "Prices Volatility",
+        "Prices & Volatility",
     ],
 )
 
-if section == "Events":
-    EventsPage()
-elif section == "Liquidation Probabilities":
-    LiqProbaPage()
-elif section == "Users Balances":
+if section == "Users Balances":
     UserPage()
 elif section == "Liquidations Trajectories":
     LiquidationsPage()
+elif section == "Prices & Volatility":
+    PricesPage()
